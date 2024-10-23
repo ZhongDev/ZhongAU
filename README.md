@@ -94,4 +94,4 @@ docker run -p <port>:3000 zhong-au
 
 ## License
 
-This project is open source and available under the [MIT License](https://github.com/ZhongDev/ZhongAU/blob/main/LICENSE).
+This project is open source and available under the [GPL-3.0 License](https://github.com/ZhongDev/ZhongAU/blob/main/LICENSE).
