@@ -78,6 +78,20 @@ npm start
 yarn start
 ```
 
+### Building for Docker
+
+Create an optimized production build:
+
+```bash
+docker build -t zhong-au .
+```
+
+Start the production server:
+
+```bash
+docker run -p <port>:3000 zhong-au
+```
+
 ## License
 
 This project is open source and available under the [MIT License](https://github.com/ZhongDev/ZhongAU/blob/main/LICENSE).
