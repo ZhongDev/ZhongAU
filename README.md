@@ -115,7 +115,7 @@ docker run -p 3000:3000 zhongau/zhong-au:latest
 To start the server detatched and automatically restarting:
 
 ```bash
-docker run -d --restart unless-stopped -p 3000:3000 zhongau/zhong-au:latest
+docker run -d --restart unless-stopped -p 3000:3000 zhongau/zhong-au
 ```
 
 To check docker containers status:
