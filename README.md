@@ -37,8 +37,9 @@ Welcome to the repository for my personal website hosted at [zhong.au](https://z
 
    ```bash
    git clone https://github.com/ZhongDev/ZhongAU.git
-   cd ZhongAU
+   cd ZhongAU/zhong-au
    ```
+
 2. **Install dependencies**
 
    ```bash
@@ -48,32 +49,35 @@ Welcome to the repository for my personal website hosted at [zhong.au](https://z
    ```
 
 ### Running the Development Server
+
 Start the development server:
 
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+```bash
+npm run dev
+# or
+yarn dev
+```
 
 Open http://localhost:3000 in your browser to view the website.
 
 ### Building for Production
+
 Create an optimized production build:
 
-   ```bash
-   npm run build
-   # or
-   yarn build
-   ```
+```bash
+npm run build
+# or
+yarn build
+```
 
 Start the production server:
 
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
+```bash
+npm start
+# or
+yarn start
+```
 
 ## License
+
 This project is open source and available under the [MIT License](https://github.com/ZhongDev/ZhongAU/blob/main/LICENSE).
