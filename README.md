@@ -10,6 +10,8 @@ Welcome to the repository for my personal website hosted at [zhong.au](https://z
   - [Installation](#installation)
   - [Running the Development Server](#running-the-development-server)
   - [Building for Production](#building-for-production)
+  - [Building for Docker](#building-for-docker)
+  - [Running on Docker without building](#running-on-docker-without-building)
 - [License](#license)
 - [Contact](#contact)
 
@@ -91,6 +93,26 @@ Start the production server:
 ```bash
 docker run -p <port>:3000 zhong-au
 ```
+
+### Running on Docker without building
+
+This docker image is hosted on the Docker Hub, and can be deployed directly.
+
+Firstly install docker on the target machine, following the [offical docker documentation](https://docs.docker.com/engine/install/)
+
+Then to download the server, run
+
+```bash
+sudo docker pull zhongau/zhong-au:latest
+```
+
+And to start the server on port 3000, run
+
+```bash
+sudo docker run -p 3000:3000 zhongau/zhong-au:latest
+```
+
+It is recommended to run this behind a reverse proxy such as nginx to enable https.
 
 ## License
 
