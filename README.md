@@ -103,13 +103,31 @@ Firstly install docker on the target machine, following the [offical docker docu
 Then to download the server, run
 
 ```bash
-sudo docker pull zhongau/zhong-au:latest
+docker pull zhongau/zhong-au:latest
 ```
 
 And to start the server on port 3000, run
 
 ```bash
-sudo docker run -p 3000:3000 zhongau/zhong-au:latest
+docker run -p 3000:3000 zhongau/zhong-au:latest
+```
+
+To start the server detatched and automatically restarting:
+
+```bash
+docker run -d --restart unless-stopped -p 3000:3000 zhongau/zhong-au:latest
+```
+
+To check docker containers status:
+
+```bash
+docker ps
+```
+
+To stop detached server:
+
+```bash
+docker stop <continer id from 'docker ps'>
 ```
 
 It is recommended to run this behind a reverse proxy such as nginx to enable https.
