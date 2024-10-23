@@ -11,6 +11,7 @@ interface Repo {
   name: string;
   html_url: string;
   description: string;
+  updated_at: string;
 }
 
 export default async function Projects() {
@@ -20,7 +21,11 @@ export default async function Projects() {
   });
   const repos: Repo[] = await res.json();
 
-  const projects = repos.map((repo) => ({
+  const sortedRepos = repos.sort((a, b) => {
+    return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime();
+  });
+
+  const projects = sortedRepos.map((repo) => ({
     id: repo.id,
     title: repo.name,
     description: repo.description || 'No description provided.',
