@@ -1,0 +1,46 @@
+{
+  "title": "Choose the About page structure",
+  "question": "The design system is settled; this choice is how About is arranged. The roll dealt The Index first. Lock one, steer it, or re-roll.",
+  "options": [
+    {
+      "id": "about-index",
+      "kind": "assigned",
+      "label": "The Index",
+      "kicker": "THE ROLL",
+      "lineage": "The index at the back of a technical manual",
+      "thesis": "Lead with everything Jason works with, each skill pointing at the project that proves it, then the bio in full.",
+      "palette": ["#f3f5f5", "#14171a", "#c3c9ce", "#2b3cf0", "#4b525a"],
+      "materials": ["48-interval hairline grid", "dot-leader index", "cobalt project references", "condensed group labels"],
+      "viewport": "Title and the one-line summary across the top; the six skill groups fill three index columns from the label split, references in cobalt.",
+      "risk": "The bio, the part peers read for, starts below the fold, and unlinked groups like Apple platforms sit visibly bare.",
+      "html": ".impeccable/mocks/decision/about-index.html"
+    },
+    {
+      "id": "about-datasheet",
+      "kind": "dealt",
+      "label": "The Datasheet",
+      "lineage": "Semiconductor component datasheets",
+      "thesis": "The bio reads as the description, with the hard facts in a ruled table beside it and skills in a full-width table below.",
+      "palette": ["#f3f5f5", "#14171a", "#c3c9ce", "#2b3cf0", "#4b525a"],
+      "materials": ["two-column front page", "ruled tables", "inverted header row", "a Used in column"],
+      "viewport": "Bio in a reading column on the left; Education, Experience, Languages and base in a ruled table on the right; the skills table starts at the fold.",
+      "risk": "A table of skills can read like a form, and the idea turns costume if any heading borrows datasheet jargon.",
+      "html": ".impeccable/mocks/decision/about-datasheet.html"
+    },
+    {
+      "id": "about-summary",
+      "kind": "dealt",
+      "label": "The Summary Strip",
+      "lineage": "The four six-hour quarters of the Home price chart",
+      "thesis": "Four facts on the grid's quarter lines answer the skim, then the bio reads uninterrupted, with the skills index after it.",
+      "palette": ["#f3f5f5", "#14171a", "#c3c9ce", "#2b3cf0", "#4b525a"],
+      "materials": ["four-quarter fact strip", "inverted labels", "calm reading column", "skills index below the bio"],
+      "viewport": "Title, then a full-width strip of four facts set between the quarter lines; the bio opens beneath it in one reading column.",
+      "risk": "The strip repeats facts the bio also states, and four equal cells can slide toward a stat-tile row if set loosely.",
+      "html": ".impeccable/mocks/decision/about-summary.html"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": { "value": "code" }
+}

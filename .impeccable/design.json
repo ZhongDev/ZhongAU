@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T00:00:00Z",
+  "title": "Design System: zhong.au",
+  "extensions": {
+    "colorMeta": {
+      "accent": { "role": "primary", "displayName": "Dispatch Cobalt", "canonical": "#2b3cf0", "darkCounterpart": "accent-dark", "tonalRamp": ["#0d1450", "#18238f", "#2131c9", "#2b3cf0", "#5a67f5", "#8c96ff", "#bfc5ff", "#e6e8ff"] },
+      "accent-dark": { "role": "primary", "displayName": "Dispatch Cobalt (dark)", "canonical": "#8c96ff", "tonalRamp": ["#0d1450", "#18238f", "#2131c9", "#2b3cf0", "#5a67f5", "#8c96ff", "#bfc5ff", "#e6e8ff"] },
+      "accent-ink": { "role": "primary", "displayName": "On Cobalt", "canonical": "#ffffff", "darkCounterpart": "accent-ink-dark" },
+      "accent-ink-dark": { "role": "primary", "displayName": "On Cobalt (dark)", "canonical": "#0e1113" },
+      "accent-wash": { "role": "primary", "displayName": "Cobalt Wash", "canonical": "rgb(43 60 240 / 0.1)", "darkCounterpart": "accent-wash-dark" },
+      "accent-wash-dark": { "role": "primary", "displayName": "Cobalt Wash (dark)", "canonical": "rgb(140 150 255 / 0.16)" },
+      "ground": { "role": "neutral", "displayName": "Cool Paper", "canonical": "#f3f5f5", "darkCounterpart": "ground-dark", "tonalRamp": ["#0e1113", "#1b2024", "#2f363c", "#4b525a", "#7b848c", "#c3c9ce", "#e1e5e7", "#f3f5f5"] },
+      "ground-dark": { "role": "neutral", "displayName": "Deep Graphite", "canonical": "#0e1113", "tonalRamp": ["#0e1113", "#1b2024", "#2f363c", "#4b525a", "#7b848c", "#c3c9ce", "#e1e5e7", "#f3f5f5"] },
+      "ink": { "role": "neutral", "displayName": "Graphite Ink", "canonical": "#14171a", "darkCounterpart": "ink-dark", "tonalRamp": ["#0e1113", "#14171a", "#2f363c", "#3a4148", "#4b525a", "#7b848c", "#b4bcc3", "#e6e9ec"] },
+      "ink-dark": { "role": "neutral", "displayName": "Graphite Ink (dark)", "canonical": "#e6e9ec" },
+      "ink-2": { "role": "neutral", "displayName": "Slate Ink", "canonical": "#3a4148", "darkCounterpart": "ink-2-dark" },
+      "ink-2-dark": { "role": "neutral", "displayName": "Slate Ink (dark)", "canonical": "#b4bcc3" },
+      "ink-3": { "role": "neutral", "displayName": "Muted Slate", "canonical": "#4b525a", "darkCounterpart": "ink-3-dark" },
+      "ink-3-dark": { "role": "neutral", "displayName": "Muted Slate (dark)", "canonical": "#99a2aa" },
+      "rule": { "role": "neutral", "displayName": "Six-Hour Rule", "canonical": "#c3c9ce", "darkCounterpart": "rule-dark" },
+      "rule-dark": { "role": "neutral", "displayName": "Six-Hour Rule (dark)", "canonical": "#2f363c" },
+      "hair": { "role": "neutral", "displayName": "Interval Hair", "canonical": "#e1e5e7", "darkCounterpart": "hair-dark" },
+      "hair-dark": { "role": "neutral", "displayName": "Interval Hair (dark)", "canonical": "#1b2024" },
+      "block-ev": { "role": "neutral", "displayName": "EV Block Tint", "canonical": "rgb(20 23 26 / 0.12)", "darkCounterpart": "block-ev-dark" },
+      "block-ev-dark": { "role": "neutral", "displayName": "EV Block Tint (dark)", "canonical": "rgb(230 233 236 / 0.16)" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The single hero heading; balanced wrap." },
+      "display-strong": { "displayName": "Display Strong", "purpose": "The name inside the hero heading, widened to wdth 122." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles in the left label columns." },
+      "title": { "displayName": "Title", "purpose": "Project names." },
+      "lead": { "displayName": "Lead", "purpose": "Opening paragraph of a section, max 36em." },
+      "body": { "displayName": "Body", "purpose": "Running text; descriptions cap at 66ch." },
+      "readout": { "displayName": "Readout", "purpose": "Chart readout, legend and Now stamp; condensed, tabular." },
+      "label": { "displayName": "Label", "purpose": "Schedule blocks, station cells, axis and status key; condensed, tabular, sentence case." }
+    },
+    "shadows": [
+      { "name": "edge-rule", "value": "inset -1px 0 0 var(--rule)", "purpose": "Closes the sheet's right edge. A stroke, not elevation." },
+      { "name": "unit-outline-hold", "value": "inset 0 0 0 1px var(--ink-3)", "purpose": "Outline for Hold schedule blocks without changing layout." },
+      { "name": "unit-outline-empty", "value": "inset 0 0 0 1px var(--rule)", "purpose": "Outline for empty station cells." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The single easing for every transition and the trace reveal." },
+      { "name": "trace-draw", "value": "clip-path inset(0 100% 0 0) to inset(0) over 1.8s, 0.15s delay", "purpose": "The one authored moment: the price trace draws left to right on load. Disabled under reduced motion." },
+      { "name": "snap", "value": "90ms", "purpose": "Crosshair, dot and readout moving between intervals." },
+      { "name": "state", "value": "120ms", "purpose": "Link underline thickness, nav underline colour, icon-button fill." },
+      { "name": "state-large", "value": "160ms", "purpose": "Underline thickness on the oversized contact address." }
+    ],
+    "breakpoints": [
+      { "name": "header-row", "value": "640px" },
+      { "name": "split", "value": "768px" },
+      { "name": "wide-48", "value": "1024px" },
+      { "name": "short-viewport", "value": "max-height: 800px (from 768px wide)" }
+    ],
+    "grid": {
+      "columns": "var(--cols): 24 below 1024px, 48 from 1024px",
+      "hairline": "1px var(--hair) every column",
+      "heavyRule": "1px var(--rule) every 25% (six hours)",
+      "inset": "0.5rem from the column line",
+      "margins": "content spans column 2 to -2"
+    }
+  },
+  "components": [
+    {
+      "name": "Strong Link",
+      "kind": "button",
+      "refersTo": "link-strong",
+      "description": "The primary call to action: underlined cobalt text with a trailing arrow icon. There are no boxed buttons.",
+      "html": "<a href=\"#\" class=\"ds-link-strong\">See the work <svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M8 2.75v10M3.75 9l4.25 4.25L12.25 9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"square\"/></svg></a>",
+      "css": ".ds-link-strong { display: inline-flex; align-items: center; gap: 0.375em; font-family: var(--font-archivo), system-ui, sans-serif; font-size: 1.0625rem; color: var(--accent, #2b3cf0); font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.25em; transition: text-decoration-thickness 120ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-link-strong:hover { text-decoration-thickness: 2px; } .ds-link-strong:focus-visible { outline: 2px solid var(--accent, #2b3cf0); outline-offset: 3px; }"
+    },
+    {
+      "name": "Quiet Link",
+      "kind": "button",
+      "refersTo": "link-quiet",
+      "description": "A secondary link in muted text with a rule-coloured underline, used in the footer.",
+      "html": "<a href=\"#\" class=\"ds-link-quiet\">Site source <svg viewBox=\"0 0 16 16\" width=\"14\" height=\"14\" aria-hidden=\"true\"><path d=\"M4.75 11.25l6.5-6.5M5.5 4.75h5.75v5.75\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"square\"/></svg></a>",
+      "css": ".ds-link-quiet { display: inline-flex; align-items: center; gap: 0.3em; font-family: var(--font-archivo), system-ui, sans-serif; font-size: 0.875rem; color: var(--ink-3, #4b525a); text-decoration: underline; text-decoration-color: var(--rule, #c3c9ce); text-decoration-thickness: 1px; text-underline-offset: 0.25em; } .ds-link-quiet:hover { color: var(--ink, #14171a); text-decoration-color: currentColor; } .ds-link-quiet:focus-visible { outline: 2px solid var(--accent, #2b3cf0); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Header navigation: plain text with a hidden 2px underline that turns rule-coloured on hover and cobalt for the current page.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav-link\">About</a><a href=\"#\" class=\"ds-nav-link\" aria-current=\"page\">Projects</a><a href=\"#\" class=\"ds-nav-link\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 2rem; font-family: var(--font-archivo), system-ui, sans-serif; } .ds-nav-link { display: inline-block; padding-block: 0.375rem; font-size: 0.9375rem; color: var(--ink, #14171a); text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 2px; text-underline-offset: 0.4em; transition: text-decoration-color 120ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-link:hover { text-decoration-color: var(--rule, #c3c9ce); } .ds-nav-link[aria-current='page'] { text-decoration-color: var(--accent, #2b3cf0); } .ds-nav-link:focus-visible { outline: 2px solid var(--accent, #2b3cf0); outline-offset: 3px; }"
+    },
+    {
+      "name": "Icon Button",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "A square, borderless header control (theme toggle, GitHub) with a hair-coloured fill on hover.",
+      "html": "<button type=\"button\" class=\"ds-icon-button\" aria-label=\"Switch to dark theme\"><svg viewBox=\"0 0 16 16\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M13.25 9.6A5.5 5.5 0 0 1 6.4 2.75a5.5 5.5 0 1 0 6.85 6.85z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-icon-button { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-width: 2.5rem; height: 2.5rem; padding: 0 0.625rem; border: 0; border-radius: 0; background: transparent; color: var(--ink, #14171a); font-size: 0.9375rem; cursor: pointer; transition: background-color 120ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-icon-button:hover { background: var(--hair, #e1e5e7); } .ds-icon-button:focus-visible { outline: 2px solid var(--accent, #2b3cf0); outline-offset: 3px; }"
+    },
+    {
+      "name": "Schedule Blocks",
+      "kind": "custom",
+      "refersTo": "sched-block-charge",
+      "description": "Battery schedule units on the 48-interval grid: Charge (cobalt), Discharge (ink), EV (translucent ink), Hold (outline). Separated by 1px gaps.",
+      "html": "<div class=\"ds-sched\"><span class=\"ds-sched-block ds-sched-ev\" style=\"grid-column: 1 / 11\">EV</span><span class=\"ds-sched-block ds-sched-hold\" style=\"grid-column: 11 / 20\">Hold</span><span class=\"ds-sched-block ds-sched-charge\" style=\"grid-column: 20 / 32\">Charge</span><span class=\"ds-sched-block ds-sched-hold\" style=\"grid-column: 32 / 35\">Hold</span><span class=\"ds-sched-block ds-sched-discharge\" style=\"grid-column: 35 / 43\">Discharge</span><span class=\"ds-sched-block ds-sched-hold\" style=\"grid-column: 43 / 49\">Hold</span></div>",
+      "css": ".ds-sched { display: grid; grid-template-columns: repeat(48, minmax(0, 1fr)); height: 2rem; font-family: var(--font-archivo), system-ui, sans-serif; } .ds-sched-block { display: flex; align-items: center; margin-inline: 1px; padding-inline: 0.5rem; overflow: hidden; white-space: nowrap; font-size: 0.75rem; font-weight: 560; font-stretch: 85%; letter-spacing: 0.01em; } .ds-sched-ev { background: var(--block-ev, rgb(20 23 26 / 0.12)); color: var(--ink, #14171a); } .ds-sched-hold { box-shadow: inset 0 0 0 1px var(--ink-3, #4b525a); color: var(--ink-2, #3a4148); } .ds-sched-charge { background: var(--accent, #2b3cf0); color: var(--accent-ink, #ffffff); } .ds-sched-discharge { background: var(--ink, #14171a); color: var(--ground, #f3f5f5); }"
+    },
+    {
+      "name": "Status Stations",
+      "kind": "chip",
+      "refersTo": "station-on",
+      "description": "Three fixed status cells (Ongoing, In progress, Shipped). Only the active cell is filled and labelled.",
+      "html": "<div class=\"ds-stations\"><span class=\"ds-station\"></span><span class=\"ds-station ds-station-on\">In progress</span><span class=\"ds-station\"></span></div>",
+      "css": ".ds-stations { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); height: 1.75rem; max-width: 18rem; font-family: var(--font-archivo), system-ui, sans-serif; } .ds-station { display: flex; align-items: center; justify-content: center; margin-inline: 1px; box-shadow: inset 0 0 0 1px var(--rule, #c3c9ce); font-size: 0.75rem; font-weight: 560; font-stretch: 85%; letter-spacing: 0.01em; white-space: nowrap; } .ds-station-on { background: var(--ink, #14171a); color: var(--ground, #f3f5f5); box-shadow: none; }"
+    },
+    {
+      "name": "Inverted Tag",
+      "kind": "chip",
+      "refersTo": "inverted-tag",
+      "description": "A ground-on-ink chip for the chart readout and the dated Now stamp.",
+      "html": "<span class=\"ds-inverted-tag\"><time datetime=\"2026-11\">Nov 2026</time></span>",
+      "css": ".ds-inverted-tag { display: inline-block; padding: 0.25rem 0.5rem; background: var(--ink, #14171a); color: var(--ground, #f3f5f5); font-family: var(--font-archivo), system-ui, sans-serif; font-size: 0.8125rem; font-stretch: 85%; font-variant-numeric: tabular-nums; line-height: 1.3; white-space: nowrap; }"
+    },
+    {
+      "name": "Project Row",
+      "kind": "card",
+      "refersTo": "station",
+      "description": "A ruled list row rather than a card: title, stations, muted dot-joined tags and links between 1px rules.",
+      "html": "<article class=\"ds-project\"><h3 class=\"ds-project-title\">YouTube Karaoke App</h3><p class=\"ds-project-desc\">A desktop karaoke app with a YouTube player, a synced-lyrics overlay and a song queue.</p><ul class=\"ds-project-tags\"><li>Electron</li><li>TypeScript</li><li>Lyrics alignment</li></ul></article>",
+      "css": ".ds-project { display: grid; row-gap: 0.875rem; border-top: 1px solid var(--rule, #c3c9ce); border-bottom: 1px solid var(--rule, #c3c9ce); padding: 2rem 0.5rem 2.25rem; font-family: var(--font-archivo), system-ui, sans-serif; } .ds-project-title { margin: 0; font-size: 1.375rem; line-height: 1.2; font-weight: 620; letter-spacing: -0.01em; color: var(--ink, #14171a); } .ds-project-desc { margin: 0; max-width: 66ch; font-size: 1.0625rem; line-height: 1.6; color: var(--ink-2, #3a4148); } .ds-project-tags { display: flex; flex-wrap: wrap; margin: 0; padding: 0; list-style: none; font-size: 0.875rem; line-height: 1.5; color: var(--ink-3, #4b525a); } .ds-project-tags li:not(:last-child)::after { content: '\\00B7'; margin-inline: 0.45em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Dispatch Interval",
+    "overview": "The page is drawn on one day of the wholesale electricity market. A full-bleed hairline grid of interval columns is the ground of every surface, running unbroken from the header to the footer, with a heavier rule every six hours. Content does not sit in boxes on top of that ground; it snaps to the columns, the way prices and battery actions snap to dispatch intervals. Sections are separated by full-width horizontal rules, never by cards or tinted panels.\n\nThe palette is a cool neutral paper (deep graphite in dark), graphite ink in three strengths, and one cobalt accent. Type is a single grotesk, Archivo, whose width axis carries the voice: widened for emphasis and headings, condensed for chart and status labels, with tabular figures wherever time or data appears. Shape is square throughout; the only round form is the chart's data dot.\n\nDensity is calm and editorial at the section level (generous vertical rhythm, long measures capped in em/ch) and tight at the data level (12px condensed labels, 1px gaps between units). Motion is restrained to one authored moment, the price trace drawing left to right on load, plus quick, snapping state transitions. Everything is static under reduced motion.",
+    "keyCharacteristics": [
+      "Full-bleed interval grid as the page ground: 48 half-hour columns from 1024px, 24 hourly columns below, heavier rule every quarter of the width (six hours).",
+      "Content aligns to grid columns, with a constant 0.5rem inset from the column line.",
+      "One cobalt accent; graphite ink in three strengths; no gradients, no glows.",
+      "One family, Archivo, with the width axis as voice and tabular figures for data.",
+      "Square corners, 1px rules, no elevation.",
+      "Real data draws solid; illustrative data draws dashed and is labelled as such."
+    ],
+    "rules": [
+      { "name": "The One Cobalt Rule", "body": "Cobalt marks what moves or can be acted on: the data trace, links, focus, the crosshair and markers. It is never a background panel, a decorative stripe or a heading colour.", "section": "colors" },
+      { "name": "The Inversion Rule", "body": "Emphasis without cobalt is ink-on-ground inverted to ground-on-ink, as in the readout, the Now stamp, the active station and the Discharge block. In dark mode the same tokens flip, so the inversion survives.", "section": "colors" },
+      { "name": "The Width-as-Voice Rule", "body": "Change emphasis with the width axis before reaching for size or colour: widened (114 to 122) for headings and the name, 100 for prose, condensed (85) for data and status labels.", "section": "typography" },
+      { "name": "The Tabular Time Rule", "body": "Every time, interval or data label uses tabular figures (all `time` elements, the readout and the axis), so values do not jitter as they change.", "section": "typography" },
+      { "name": "The Snap Rule", "body": "Every element starts and ends on an interval column. If a placement needs a value that is not a column boundary plus the inset, the placement is wrong.", "section": "layout" },
+      { "name": "The No Card Rule", "body": "Group content with rules and column position, never with boxed, filled or shadowed containers. The grid stays visible behind every section.", "section": "layout" },
+      { "name": "The Flat Sheet Rule", "body": "Nothing floats above the grid. Overlays such as the chart readout are inverted ink chips sitting flush on the plot, not lifted cards.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do place every block on interval columns with the 0.5rem inset, and use subgrid for nested rows.",
+      "Do keep the hairline grid visible and unbroken from header to footer on every surface in this world.",
+      "Do reserve cobalt for the trace, links, focus, selection, crosshair and markers, and the Charge block.",
+      "Do use the width axis for emphasis: wdth 114 to 122 for headings and names, 85 for data labels.",
+      "Do use tabular figures for every time and data value.",
+      "Do draw illustrative data dashed and label it as illustrative; draw real data solid.",
+      "Do keep statuses in fixed station columns (Ongoing, In progress, Shipped), in the same order everywhere.",
+      "Do keep motion to the single trace-drawing moment plus short snapping transitions, all static under reduced motion.",
+      "Do define every colour for both themes through the same custom properties."
+    ],
+    "donts": [
+      "Don't use cards, tinted panels, drop shadows or rounded containers to group content; use rules and columns.",
+      "Don't use gradients or glows.",
+      "Don't introduce a second accent hue or a second type family.",
+      "Don't set uppercase tracked labels or kicker lines above headings; the only small labels are condensed, sentence-case data labels.",
+      "Don't render tech tags as pills; they are muted text joined by middle dots.",
+      "Don't add terminal or fake-shell styling, or dashboard chrome such as KPI tiles and gauges.",
+      "Don't show prices, currency or metrics as figures on illustrative charts."
+    ]
+  }
+}

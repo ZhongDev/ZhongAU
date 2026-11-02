@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>About: Chapters (first viewport sketch)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background-color:#f3f5f5;color:#14171a;font-family:Archivo,sans-serif;font-size:17px;line-height:1.6;position:relative;
+    background-image:linear-gradient(to right,#c3c9ce 1px,transparent 1px),linear-gradient(to right,#e1e5e7 1px,transparent 1px);
+    background-size:360px 100%,30px 100%}
+  header{position:absolute;inset:0 0 auto 0;height:64px;border-bottom:1px solid #c3c9ce;display:flex;align-items:center}
+  .name{position:absolute;left:38px;font-weight:600;font-size:16px}
+  nav{position:absolute;left:368px;display:flex;gap:32px;font-size:15px}
+  nav .on{text-decoration:underline;text-decoration-color:#2b3cf0;text-decoration-thickness:2px;text-underline-offset:.4em}
+  .utils{position:absolute;right:30px;display:flex;gap:24px;font-size:15px}
+  h1{position:absolute;left:38px;top:104px;font-size:76px;line-height:1;font-weight:700;font-stretch:122%;letter-spacing:-.035em}
+  .k{font-size:13px;font-weight:560;font-stretch:85%;color:#4b525a;padding-bottom:6px;border-bottom:1px solid #c3c9ce;margin-bottom:14px}
+  .bio p{margin-bottom:14px}
+  em{font-style:italic}
+  .label{font-size:26px;line-height:1.15;font-weight:620;font-stretch:114%;letter-spacing:-.01em}
+  .hr{position:absolute;left:0;right:0;border-top:1px solid #c3c9ce}
+  table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5}
+  th{width:150px;text-align:left;vertical-align:top;font-size:13px;font-weight:560;font-stretch:85%;color:#4b525a;padding:10px 8px 10px 0}
+  td{padding:10px 0;vertical-align:top}
+  tr{border-bottom:1px solid #c3c9ce}
+  td ul{list-style:none} td li+li{margin-top:6px}
+  .g{margin-bottom:18px}
+  .g h3{font-size:13px;font-weight:560;font-stretch:85%;color:#4b525a;padding-bottom:5px;border-bottom:1px solid #c3c9ce;margin-bottom:3px}
+  .g ul{list-style:none}
+  .g li{display:flex;align-items:baseline;gap:6px;font-size:15px;line-height:24px;white-space:nowrap}
+  .g li i{flex:1;border-bottom:1px dotted #c3c9ce;transform:translateY(-4px);min-width:12px}
+  .g li b{font-weight:400;font-size:13px;font-stretch:90%;color:#2b3cf0;text-decoration:underline;text-underline-offset:.2em}
+  .sec{position:absolute;left:0;right:0;border-top:1px solid #c3c9ce}
+  .sec .label{position:absolute;left:38px;top:40px;width:290px}
+  .sec .body{position:absolute;left:368px;top:44px;width:682px}
+  .sub{display:grid;grid-template-columns:150px 1fr;column-gap:8px;font-size:15px;line-height:1.5;border-top:1px solid #c3c9ce;padding-top:10px;margin-top:10px}
+  .sub .t{font-size:13px;font-weight:560;font-stretch:85%;color:#4b525a}
+  .sub ul{list-style:none} .sub li+li{margin-top:4px}
+</style></head>
+<body>
+<header><span class="name">Jason Zhong</span><nav><span class="on">About</span><span>Projects</span><span>Contact</span></nav><span class="utils"><span>GitHub</span><span>Theme</span></span></header>
+<h1>About</h1>
+<section class="sec" style="top:222px"><h2 class="label">Across the stack</h2><div class="body"><p>I studied Computer Science at UNSW, graduating with Distinction in 2024. I've spent the years since working across the stack: running networks and Windows fleets on-site, building web apps, and leading the build of an in-house work health and safety app used on real construction sites, from idea to production.</p><div class="sub" style="margin-top:22px"><span class="t">Education</span><span>UNSW Sydney — BSc Computer Science (Distinction), 2021–2024</span></div><div class="sub"><span class="t">Experience</span><ul><li>IT and systems administration: on-site networking, Windows fleet upgrades, tech support</li><li>Full-stack web development: Node.js/TypeScript backends, React frontends</li><li>Internal tools: led an in-house work site safety app from idea to production</li></ul></div></div></section><section class="sec" style="top:640px"><h2 class="label">Infrastructure, networking, latency</h2><div class="body"><p>Shipping software end to end on my own taught me a lot about what it takes to get something real into people's hands. It also made me appreciate how much faster you grow alongside experienced engineers, and I'm especially drawn to infrastructure, networking and latency, where the systems underneath <em>are</em> the product.</p></div></section>
+</body></html>

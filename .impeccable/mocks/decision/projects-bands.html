@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Projects: Status Bands (first viewport sketch)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background-color:#f3f5f5;color:#14171a;font-family:Archivo,sans-serif;font-size:17px;line-height:1.6;position:relative;
+    background-image:linear-gradient(to right,#c3c9ce 1px,transparent 1px),linear-gradient(to right,#e1e5e7 1px,transparent 1px);
+    background-size:360px 100%,30px 100%}
+  header{position:absolute;inset:0 0 auto 0;height:64px;border-bottom:1px solid #c3c9ce;display:flex;align-items:center}
+  .name{position:absolute;left:38px;font-weight:600;font-size:16px}
+  nav{position:absolute;left:368px;display:flex;gap:32px;font-size:15px}
+  nav .on{text-decoration:underline;text-decoration-color:#2b3cf0;text-decoration-thickness:2px;text-underline-offset:.4em}
+  .utils{position:absolute;right:30px;display:flex;gap:24px;font-size:15px}
+  h1{position:absolute;left:38px;top:104px;font-size:76px;line-height:1;font-weight:700;font-stretch:122%;letter-spacing:-.035em}
+  .hr{position:absolute;left:0;right:0;border-top:1px solid #c3c9ce}
+  /* station key as contents */
+  .key{position:absolute;left:30px;top:204px;display:flex;gap:1px}
+  .key a{display:flex;justify-content:space-between;align-items:center;width:149px;height:30px;padding:0 8px;
+    box-shadow:inset 0 0 0 1px #c3c9ce;font-size:12px;font-weight:560;font-stretch:85%;color:#14171a;text-decoration:none;font-variant-numeric:tabular-nums}
+  .key a span{color:#2b3cf0;text-decoration:underline;text-underline-offset:.2em}
+  .band-label{position:absolute;left:38px;width:290px}
+  .band-label h2{font-size:28px;line-height:1.15;font-weight:620;font-stretch:114%;letter-spacing:-.02em}
+  .st{display:flex;gap:1px;margin-top:14px}
+  .st i{width:58px;height:10px;box-shadow:inset 0 0 0 1px #c3c9ce}
+  .st i.on{background:#14171a;box-shadow:none}
+  .row{position:absolute;left:360px;right:30px;border-bottom:1px solid #c3c9ce}
+  .row h3{position:absolute;left:8px;width:262px;font-size:22px;line-height:1.2;font-weight:620;letter-spacing:-.01em}
+  .row .meta{position:absolute;left:8px;width:262px;font-size:14px;line-height:1.5;color:#4b525a}
+  .row .meta a{color:#2b3cf0;font-weight:600;text-underline-offset:.25em}
+  .row p.d{position:absolute;left:338px;width:640px;font-size:16px;line-height:1.7;color:#3a4148}
+</style></head>
+<body>
+<header><span class="name">Jason Zhong</span><nav><span>About</span><span class="on">Projects</span><span>Contact</span></nav><span class="utils"><span>GitHub</span><span>Theme</span></span></header>
+<h1>Projects</h1>
+<nav class="key" aria-label="Statuses"><a>Ongoing <span>2</span></a><a>In progress <span>2</span></a><a>Shipped <span>2</span></a><a>Archive <span>10</span></a></nav>
+<div class="hr" style="top:262px"></div>
+
+<div class="band-label" style="top:302px"><h2>Ongoing</h2><div class="st"><i class="on"></i><i></i><i></i></div></div>
+<div class="row" style="top:263px;height:262px">
+  <h3 style="top:38px">Homelab &amp; home energy optimisation</h3>
+  <div class="meta" style="top:112px">Proxmox · Home Assistant · Modbus · Linear programming · UniFi<br><br>No public repo</div>
+  <p class="d" style="top:36px">A Proxmox host running Home Assistant and a stack of self-hosted services. The centrepiece is a linear-programming optimiser that schedules a home solar and battery system and EV charging against live wholesale electricity prices. It bridges the optimiser's output to inverter control over Modbus, using setpoints that avoid wearing out the inverter's storage. All of it sits on a UniFi network with 2.5GbE where it matters.</p>
+</div>
+<div class="row" style="top:525px;height:200px">
+  <h3 style="top:38px">Local document pipeline</h3>
+  <div class="meta" style="top:84px">paperless-ngx · Ollama · Vision OCR · Tailscale<br><br>No public repo</div>
+  <p class="d" style="top:36px">Self-hosted paperless-ngx with vision-model OCR and automatic metadata classification. It's powered by a local LLM reached over Tailscale, so documents never leave the network.</p>
+</div>
+
+<div class="hr" style="top:765px"></div>
+<div class="band-label" style="top:805px"><h2>In progress</h2><div class="st"><i></i><i class="on"></i><i></i></div></div>
+<div class="row" style="top:766px;height:200px;border:0">
+  <h3 style="top:38px">YouTube Karaoke App</h3>
+  <p class="d" style="top:36px">A desktop karaoke app with a YouTube player, a synced-lyrics overlay and a song queue, supporting English, Japanese and Korean lyrics. It fetches existing synced lyrics first and falls back to local forced alignment.</p>
+</div>
+</body></html>

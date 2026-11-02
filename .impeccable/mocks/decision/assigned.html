@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Dispatch Interval: first viewport sketch</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background:#F6F7F5;color:#14171A;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-variant-numeric:tabular-nums;position:relative}
+  svg.grid{position:absolute;inset:0}
+  header{position:absolute;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 30px;border-bottom:1px solid #C9CED3}
+  header .name{font-size:18px;font-weight:600}
+  header nav{display:flex;gap:30px;font-size:15px}
+  .kicker{position:absolute;left:30px;top:118px;font-size:15px;color:#4B535B}
+  h1{position:absolute;left:30px;top:150px;width:900px;font-size:76px;line-height:1.0;font-weight:600;letter-spacing:-0.025em}
+  .sub{position:absolute;left:30px;top:330px;width:600px;font-size:20px;line-height:1.45;color:#3A4148}
+  .cta{position:absolute;left:30px;top:410px;font-size:18px;color:#2B3CF0;font-weight:600;border-bottom:2px solid #2B3CF0;padding-bottom:2px}
+  .tag{position:absolute;right:30px;top:488px;font-size:13px;color:#4B535B;display:flex;align-items:center;gap:10px}
+  .caption{position:absolute;left:30px;top:488px;font-size:15px;color:#3A4148;width:640px}
+  .readout{position:absolute;left:762px;top:540px;background:#14171A;color:#F6F7F5;font-size:14px;padding:6px 10px}
+  .axis{position:absolute;top:860px;font-size:13px;color:#4B535B}
+</style></head>
+<body>
+<svg class="grid" width="1440" height="900" viewBox="0 0 1440 900" aria-hidden="true">
+  <g stroke="#E1E4E7" stroke-width="1">
+    <line x1="30" y1="64" x2="30" y2="850"/><line x1="60" y1="64" x2="60" y2="850"/><line x1="90" y1="64" x2="90" y2="850"/><line x1="120" y1="64" x2="120" y2="850"/><line x1="150" y1="64" x2="150" y2="850"/><line x1="180" y1="64" x2="180" y2="850"/><line x1="210" y1="64" x2="210" y2="850"/><line x1="240" y1="64" x2="240" y2="850"/><line x1="270" y1="64" x2="270" y2="850"/><line x1="300" y1="64" x2="300" y2="850"/><line x1="330" y1="64" x2="330" y2="850"/>
+    <line x1="420" y1="64" x2="420" y2="850"/><line x1="450" y1="64" x2="450" y2="850"/><line x1="480" y1="64" x2="480" y2="850"/><line x1="510" y1="64" x2="510" y2="850"/><line x1="540" y1="64" x2="540" y2="850"/><line x1="570" y1="64" x2="570" y2="850"/><line x1="600" y1="64" x2="600" y2="850"/><line x1="630" y1="64" x2="630" y2="850"/><line x1="660" y1="64" x2="660" y2="850"/><line x1="690" y1="64" x2="690" y2="850"/>
+    <line x1="750" y1="64" x2="750" y2="850"/><line x1="780" y1="64" x2="780" y2="850"/><line x1="810" y1="64" x2="810" y2="850"/><line x1="840" y1="64" x2="840" y2="850"/><line x1="870" y1="64" x2="870" y2="850"/><line x1="900" y1="64" x2="900" y2="850"/><line x1="930" y1="64" x2="930" y2="850"/><line x1="960" y1="64" x2="960" y2="850"/><line x1="990" y1="64" x2="990" y2="850"/><line x1="1020" y1="64" x2="1020" y2="850"/><line x1="1050" y1="64" x2="1050" y2="850"/>
+    <line x1="1110" y1="64" x2="1110" y2="850"/><line x1="1140" y1="64" x2="1140" y2="850"/><line x1="1170" y1="64" x2="1170" y2="850"/><line x1="1200" y1="64" x2="1200" y2="850"/><line x1="1230" y1="64" x2="1230" y2="850"/><line x1="1260" y1="64" x2="1260" y2="850"/><line x1="1290" y1="64" x2="1290" y2="850"/><line x1="1320" y1="64" x2="1320" y2="850"/><line x1="1350" y1="64" x2="1350" y2="850"/><line x1="1380" y1="64" x2="1380" y2="850"/>
+  </g>
+  <g stroke="#B9C0C6" stroke-width="1">
+    <line x1="0.5" y1="64" x2="0.5" y2="850"/><line x1="360" y1="64" x2="360" y2="850"/><line x1="720" y1="64" x2="720" y2="850"/><line x1="1080" y1="64" x2="1080" y2="850"/><line x1="1439.5" y1="64" x2="1439.5" y2="850"/>
+  </g>
+  <!-- zero line: a real axis, drawn solid -->
+  <line x1="0" y1="700" x2="1440" y2="700" stroke="#14171A" stroke-width="1"/>
+  <!-- below-zero window: the moment the market pays to take power -->
+  <path d="M378 700 C420 700 430 742 480 748 L620 752 C660 752 690 746 720 740 L780 738 C810 738 830 722 846 700 Z" fill="#2B3CF0" fill-opacity="0.12"/>
+  <!-- illustrative price trace: dashed because it is not live data -->
+  <path d="M0 640 C60 642 120 650 180 646 C230 640 250 590 285 566 C310 552 330 600 378 700 C420 700 430 742 480 748 L620 752 C660 752 690 746 720 740 L780 738 C810 738 830 722 846 700 C900 640 940 560 1000 534 C1040 520 1080 518 1110 530 C1150 552 1180 600 1230 622 C1300 640 1380 636 1440 634" fill="none" stroke="#2B3CF0" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <!-- crosshair -->
+  <line x1="750" y1="520" x2="750" y2="846" stroke="#2B3CF0" stroke-width="1.5"/>
+  <circle cx="750" cy="739" r="5" fill="#2B3CF0"/>
+  <!-- schedule blocks -->
+  <g font-family="Helvetica Neue,Arial,sans-serif" font-size="13">
+    <rect x="0" y="806" width="300" height="34" fill="#14171A" fill-opacity="0.16"/>
+    <rect x="300.5" y="806.5" width="77" height="33" fill="none" stroke="#8B939A"/>
+    <rect x="378" y="806" width="468" height="34" fill="#2B3CF0"/>
+    <rect x="846.5" y="806.5" width="143" height="33" fill="none" stroke="#8B939A"/>
+    <rect x="990" y="806" width="240" height="34" fill="#14171A"/>
+    <rect x="1230.5" y="806.5" width="209" height="33" fill="none" stroke="#8B939A"/>
+  </g>
+</svg>
+<header><span class="name">Jason Zhong</span><nav><span>About</span><span>Projects</span><span>Contact</span><span>GitHub</span><span>◐</span></nav></header>
+<p class="kicker">Jason Zhong · Engineer, Sydney</p>
+<h1>I build fast, private software that runs on hardware I own.</h1>
+<p class="sub">Sydney-based engineer and UNSW Computer Science graduate, working across infrastructure, networking and software.</p>
+<span class="cta">See the work ↓</span>
+<p class="caption">Homelab optimiser · schedules a home battery and EV charging against wholesale electricity prices.</p>
+<p class="tag"><svg width="28" height="4"><line x1="0" y1="2" x2="28" y2="2" stroke="#2B3CF0" stroke-width="2.5" stroke-dasharray="7 5"/></svg>Illustrative day · not live data</p>
+<p class="readout">12:30 · price below zero · charging</p>
+<span class="axis" style="left:4px">00:00</span><span class="axis" style="left:340px">06:00</span><span class="axis" style="left:700px">12:00</span><span class="axis" style="left:1060px">18:00</span><span class="axis" style="right:4px">24:00</span>
+</body></html>

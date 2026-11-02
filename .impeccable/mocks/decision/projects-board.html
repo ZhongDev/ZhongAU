@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Projects: Quarter Board (first viewport sketch)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background-color:#f3f5f5;color:#14171a;font-family:Archivo,sans-serif;font-size:17px;line-height:1.6;position:relative;
+    background-image:linear-gradient(to right,#c3c9ce 1px,transparent 1px),linear-gradient(to right,#e1e5e7 1px,transparent 1px);
+    background-size:360px 100%,30px 100%}
+  header{position:absolute;inset:0 0 auto 0;height:64px;border-bottom:1px solid #c3c9ce;display:flex;align-items:center}
+  .name{position:absolute;left:38px;font-weight:600;font-size:16px}
+  nav{position:absolute;left:368px;display:flex;gap:32px;font-size:15px}
+  nav .on{text-decoration:underline;text-decoration-color:#2b3cf0;text-decoration-thickness:2px;text-underline-offset:.4em}
+  .utils{position:absolute;right:30px;display:flex;gap:24px;font-size:15px}
+  h1{position:absolute;left:38px;top:104px;font-size:76px;line-height:1;font-weight:700;font-stretch:122%;letter-spacing:-.035em}
+  .hr{position:absolute;left:0;right:0;border-top:1px solid #c3c9ce}
+  .col{position:absolute;top:228px}
+  .c1{left:30px;width:330px}.c2{left:361px;width:359px}.c3{left:721px;width:359px}.c4{left:1081px;width:329px}
+  .head{display:flex;justify-content:space-between;align-items:center;height:30px;padding:0 8px;background:#14171a;color:#f3f5f5;
+    font-size:12px;font-weight:560;font-stretch:85%;font-variant-numeric:tabular-nums}
+  .head.out{background:none;color:#14171a;box-shadow:inset 0 0 0 1px #c3c9ce}
+  .e{padding:18px 8px 20px;border-bottom:1px solid #c3c9ce}
+  .e h3{font-size:19px;line-height:1.2;font-weight:620;letter-spacing:-.01em;margin-bottom:8px}
+  .e p{font-size:15px;line-height:1.55;color:#3a4148}
+  .e .t{font-size:13px;line-height:1.5;color:#4b525a;margin-top:10px}
+  .e .l{font-size:13px;margin-top:6px;color:#4b525a}
+  .e .l a{color:#2b3cf0;font-weight:600;text-underline-offset:.25em;margin-right:14px}
+  .ar{list-style:none;padding:10px 8px 0}
+  .ar li{padding:7px 0 8px;border-bottom:1px solid #e1e5e7;font-size:13px;line-height:1.4;color:#3a4148}
+  .ar li a{display:block;font-size:14px;font-weight:600;color:#2b3cf0;text-underline-offset:.25em;font-stretch:90%}
+</style></head>
+<body>
+<header><span class="name">Jason Zhong</span><nav><span>About</span><span class="on">Projects</span><span>Contact</span></nav><span class="utils"><span>GitHub</span><span>Theme</span></span></header>
+<h1>Projects</h1>
+<div class="hr" style="top:212px"></div>
+
+<section class="col c1"><h2 class="head">Ongoing<span>2</span></h2>
+  <div class="e"><h3>Homelab &amp; home energy optimisation</h3><p>A Proxmox host running Home Assistant and a stack of self-hosted services. The centrepiece is a linear-programming optimiser that schedules a home solar and battery system and EV charging against live wholesale electricity prices. It bridges the optimiser's output to inverter control over Modbus, using setpoints that avoid wearing out the inverter's storage. All of it sits on a UniFi network with 2.5GbE where it matters.</p><p class="t">Proxmox · Home Assistant · Modbus · Linear programming · UniFi</p><p class="l">No public repo</p></div>
+  <div class="e"><h3>Local document pipeline</h3><p>Self-hosted paperless-ngx with vision-model OCR and automatic metadata classification. It's powered by a local LLM reached over Tailscale, so documents never leave the network.</p><p class="t">paperless-ngx · Ollama · Vision OCR · Tailscale</p></div>
+</section>
+<section class="col c2"><h2 class="head">In progress<span>2</span></h2>
+  <div class="e"><h3>YouTube Karaoke App</h3><p>A desktop karaoke app with a YouTube player, a synced-lyrics overlay and a song queue, supporting English, Japanese and Korean lyrics. It fetches existing synced lyrics first and falls back to local forced alignment. Successor to Youtube-Karaoke-Together.</p><p class="t">Electron · TypeScript · Lyrics alignment</p><p class="l"><a>GitHub</a></p></div>
+  <div class="e"><h3>E-ink home dashboards</h3><p>Multi-panel e-ink displays showing electricity prices, schedules, network stats and weather. Each panel is rendered on a server and pushed to the display.</p><p class="t">E-ink · Server-side rendering · Home Assistant</p><p class="l">No public repo</p></div>
+</section>
+<section class="col c3"><h2 class="head">Shipped<span>2</span></h2>
+  <div class="e"><h3>webcon-sdvx / maimai-webcon</h3><p>Turns a phone or iPad into a controller for the rhythm games Sound Voltex and maimai.</p><p class="t">JavaScript · Python · WebSockets</p><p class="l"><a>webcon-sdvx</a><a>maimai-webcon</a></p></div>
+  <div class="e"><h3>Ardducky</h3><p>An Arduino-based "BadUSB" device (a USB stick that types like a keyboard) for authorised penetration testing.</p><p class="t">Arduino · C++ · Security</p><p class="l"><a>GitHub</a></p></div>
+</section>
+<section class="col c4"><h2 class="head out">Archive<span>10</span></h2>
+  <ul class="ar">
+    <li><a>Youtube-Karaoke-Together</a>YouTube queueing for group karaoke sessions</li>
+    <li><a>Redux-Music-Bot</a>Discord music bot</li>
+    <li><a>d20-bot</a>Discord dice bot for D&amp;D</li>
+    <li><a>discord-sandwich-scheduler-bot</a>Discord bot that orders a sandwich every day</li>
+    <li><a>Oxygen-Ordering-System</a>Restaurant order management system</li>
+    <li><a>node-rpi-garage-ui</a>Raspberry Pi Zero W garage door opener UI</li>
+    <li><a>http-locked-image</a>Password-protected image host in Node.js</li>
+    <li><a>Modular-Web-Utilities</a>Extensible web utilities toolbox in React</li>
+  </ul>
+</section>
+</body></html>
