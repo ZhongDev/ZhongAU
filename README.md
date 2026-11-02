@@ -91,8 +91,10 @@ docker build -t zhong-au .
 Start the production server:
 
 ```bash
-docker run -p <port>:3000 zhong-au
+docker run -p 127.0.0.1:<port>:3000 zhong-au
 ```
+
+The `127.0.0.1:` prefix keeps the server reachable only from the host machine. Without it, Docker publishes the port on every network interface, and on Linux its iptables rules bypass firewalls such as `ufw`. Only drop the prefix if you deliberately want the server exposed directly.
 
 ### Running on Docker without building
 
@@ -109,13 +111,13 @@ docker pull zhongau/zhong-au:latest
 And to start the server on port 3000, run
 
 ```bash
-docker run -p 3000:3000 zhongau/zhong-au:latest
+docker run -p 127.0.0.1:3000:3000 zhongau/zhong-au:latest
 ```
 
 To start the server detatched and automatically restarting:
 
 ```bash
-docker run -d --restart unless-stopped -p 3000:3000 zhongau/zhong-au
+docker run -d --restart unless-stopped -p 127.0.0.1:3000:3000 zhongau/zhong-au
 ```
 
 To check docker containers status:
@@ -130,7 +132,16 @@ To stop detached server:
 docker stop <continer id from 'docker ps'>
 ```
 
-It is recommended to run this behind a reverse proxy such as nginx to enable https.
+It is recommended to run this behind a reverse proxy such as nginx to enable https, pointing it at the local port:
+
+```nginx
+location / {
+    proxy_pass http://127.0.0.1:3000;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+```
 
 ## License
 
