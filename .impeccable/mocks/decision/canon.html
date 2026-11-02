@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Category standard: first viewport sketch</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background:#09090B;color:#FAFAFA;font-family:Inter,"Helvetica Neue",Arial,sans-serif}
+  header{display:flex;justify-content:space-between;align-items:center;height:72px;padding:0 120px;border-bottom:1px solid #1F1F23}
+  header nav{display:flex;gap:32px;font-size:15px;color:#A1A1AA}
+  .hero{text-align:center;padding-top:110px}
+  .hero h1{font-size:64px;font-weight:700;letter-spacing:-0.03em}
+  .hero p{font-size:24px;color:#A1A1AA;margin:20px auto 0;max-width:760px;line-height:1.4}
+  .btns{display:flex;gap:16px;justify-content:center;margin-top:36px}
+  .btn{padding:14px 26px;border-radius:10px;font-size:16px;font-weight:600}
+  .btn.p{background:#3B82F6}.btn.s{border:1px solid #3F3F46}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:0 120px;margin-top:90px}
+  .card{background:#18181B;border:1px solid #27272A;border-radius:14px;padding:24px;height:220px}
+  .card h3{font-size:22px;font-weight:600}
+  .card p{font-size:15px;color:#A1A1AA;margin-top:10px;line-height:1.5}
+  .pills{display:flex;gap:8px;margin-top:18px}
+  .pills span{font-size:13px;background:#27272A;border-radius:999px;padding:4px 12px;color:#D4D4D8}
+</style></head>
+<body>
+<header><strong>Jason Zhong</strong><nav><span>About</span><span>Projects</span><span>Contact</span><span>GitHub</span></nav></header>
+<section class="hero"><h1>Jason Zhong</h1><p>I build fast, private software that runs on hardware I own.</p>
+<div class="btns"><span class="btn p">View projects</span><span class="btn s">Get in touch</span></div></section>
+<section class="grid">
+  <div class="card"><h3>Homelab &amp; home energy optimisation</h3><p>A Proxmox host running Home Assistant and a stack of self-hosted services.</p><div class="pills"><span>Proxmox</span><span>Home Assistant</span><span>Modbus</span></div></div>
+  <div class="card"><h3>Local document pipeline</h3><p>Self-hosted paperless-ngx with vision-model OCR and automatic metadata classification.</p><div class="pills"><span>paperless-ngx</span><span>Ollama</span><span>Tailscale</span></div></div>
+</section>
+</body></html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>About: The Index (first viewport sketch)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background-color:#f3f5f5;color:#14171a;font-family:Archivo,sans-serif;font-size:17px;line-height:1.6;position:relative;
+    background-image:linear-gradient(to right,#c3c9ce 1px,transparent 1px),linear-gradient(to right,#e1e5e7 1px,transparent 1px);
+    background-size:360px 100%,30px 100%}
+  header{position:absolute;inset:0 0 auto 0;height:64px;border-bottom:1px solid #c3c9ce;display:flex;align-items:center}
+  .name{position:absolute;left:38px;font-weight:600;font-size:16px}
+  nav{position:absolute;left:368px;display:flex;gap:32px;font-size:15px}
+  nav .on{text-decoration:underline;text-decoration-color:#2b3cf0;text-decoration-thickness:2px;text-underline-offset:.4em}
+  .utils{position:absolute;right:30px;display:flex;gap:24px;font-size:15px}
+  h1{position:absolute;left:38px;top:104px;font-size:76px;line-height:1;font-weight:700;font-stretch:122%;letter-spacing:-.035em}
+  .stand{position:absolute;left:368px;top:118px;width:690px;font-size:23px;line-height:1.4;color:#3a4148;text-wrap:balance}
+  .rule{position:absolute;left:0;right:0;top:250px;border-top:1px solid #c3c9ce}
+  .label{position:absolute;left:38px;top:290px;font-size:26px;font-weight:620;font-stretch:114%;letter-spacing:-.01em}
+  .note{position:absolute;left:38px;top:336px;width:280px;font-size:14px;line-height:1.45;color:#4b525a}
+  .col{position:absolute;top:296px;width:316px}
+  .c1{left:368px}.c2{left:728px}.c3{left:1088px}
+  .g{margin-bottom:26px}
+  .g h3{font-size:13px;font-weight:560;font-stretch:85%;letter-spacing:.01em;color:#4b525a;padding-bottom:6px;border-bottom:1px solid #c3c9ce;margin-bottom:4px}
+  .g li{list-style:none;display:flex;align-items:baseline;gap:6px;font-size:15px;line-height:26px;white-space:nowrap}
+  .g li .lead{flex:1;border-bottom:1px dotted #c3c9ce;transform:translateY(-4px);min-width:12px}
+  .g li .ref{font-size:13px;font-stretch:90%;color:#2b3cf0;text-decoration:underline;text-decoration-color:#2b3cf0;text-underline-offset:.2em}
+  .g li.plain .lead{border:0}
+</style></head>
+<body>
+<header><span class="name">Jason Zhong</span><nav><span class="on">About</span><span>Projects</span><span>Contact</span></nav><span class="utils"><span>GitHub</span><span>Theme</span></span></header>
+<h1>About</h1>
+<p class="stand">Sydney-based engineer and UNSW Computer Science graduate, working across infrastructure, networking and software.</p>
+<div class="rule"></div>
+<h2 class="label">Skills</h2>
+<p class="note">Where a skill shows up in my projects, the project is linked.</p>
+<div class="col c1">
+  <div class="g"><h3>Languages</h3><ul>
+    <li><span>TypeScript/JavaScript</span><span class="lead"></span><span class="ref">Karaoke app</span><span class="ref">webcon</span></li>
+    <li class="plain"><span>Swift</span></li>
+    <li><span>Python</span><span class="lead"></span><span class="ref">webcon</span><span class="ref">webcon-sdvx-python</span></li>
+    <li><span>C/C++</span><span class="lead"></span><span class="ref">Ardducky</span></li>
+    <li class="plain"><span>SQL</span></li>
+    <li class="plain"><span>Java</span></li></ul></div>
+  <div class="g"><h3>Web &amp; backend</h3><ul>
+    <li><span>Node.js</span><span class="lead"></span><span class="ref">http-locked-image</span></li>
+    <li class="plain"><span>Fastify</span></li>
+    <li><span>React</span><span class="lead"></span><span class="ref">Modular-Web-Utilities</span></li>
+    <li class="plain"><span>Next.js</span></li>
+    <li class="plain"><span>Vite</span></li>
+    <li class="plain"><span>PostgreSQL (incl. pgvector)</span></li>
+    <li><span>Electron</span><span class="lead"></span><span class="ref">Karaoke app</span></li></ul></div>
+</div>
+<div class="col c2">
+  <div class="g"><h3>Apple platforms</h3><ul>
+    <li class="plain"><span>SwiftUI</span></li>
+    <li class="plain"><span>SwiftData/Core Data</span></li>
+    <li class="plain"><span>CloudKit</span></li>
+    <li class="plain"><span>MLX Swift</span></li></ul></div>
+  <div class="g"><h3>Infrastructure</h3><ul>
+    <li class="plain"><span>Linux</span></li>
+    <li><span>Proxmox VE</span><span class="lead"></span><span class="ref">Homelab</span></li>
+    <li class="plain"><span>Docker/Compose</span></li>
+    <li><span>Tailscale</span><span class="lead"></span><span class="ref">Document pipeline</span></li>
+    <li><span>UniFi networking</span><span class="lead"></span><span class="ref">Homelab</span></li>
+    <li class="plain"><span>TrueNAS</span></li>
+    <li><span>Home Assistant</span><span class="lead"></span><span class="ref">Homelab</span><span class="ref">E-ink dashboards</span></li></ul></div>
+</div>
+<div class="col c3">
+  <div class="g"><h3>AI / ML</h3><ul>
+    <li><span>Local LLM inference</span><span class="lead"></span><span class="ref">Document pipeline</span></li>
+    <li class="plain"><span>Embeddings</span></li>
+    <li class="plain"><span>LLM classification pipelines</span></li></ul></div>
+  <div class="g"><h3>Hardware</h3><ul>
+    <li><span>Arduino</span><span class="lead"></span><span class="ref">Ardducky</span></li>
+    <li><span>Raspberry Pi</span><span class="lead"></span><span class="ref">node-rpi-garage-ui</span></li>
+    <li class="plain"><span>Electronics</span></li>
+    <li class="plain"><span>3D printing</span></li></ul></div>
+</div>
+</body></html>

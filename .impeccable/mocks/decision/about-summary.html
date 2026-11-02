@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>About: The Summary Strip (first viewport sketch)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background-color:#f3f5f5;color:#14171a;font-family:Archivo,sans-serif;font-size:17px;line-height:1.6;position:relative;
+    background-image:linear-gradient(to right,#c3c9ce 1px,transparent 1px),linear-gradient(to right,#e1e5e7 1px,transparent 1px);
+    background-size:360px 100%,30px 100%}
+  header{position:absolute;inset:0 0 auto 0;height:64px;border-bottom:1px solid #c3c9ce;display:flex;align-items:center}
+  .name{position:absolute;left:38px;font-weight:600;font-size:16px}
+  nav{position:absolute;left:368px;display:flex;gap:32px;font-size:15px}
+  nav .on{text-decoration:underline;text-decoration-color:#2b3cf0;text-decoration-thickness:2px;text-underline-offset:.4em}
+  .utils{position:absolute;right:30px;display:flex;gap:24px;font-size:15px}
+  h1{position:absolute;left:38px;top:104px;font-size:76px;line-height:1;font-weight:700;font-stretch:122%;letter-spacing:-.035em}
+  .strip{position:absolute;left:0;right:0;top:222px;height:196px;border-top:1px solid #c3c9ce;border-bottom:1px solid #c3c9ce;display:grid;grid-template-columns:repeat(4,360px)}
+  .cell{padding:22px 30px 0 38px}
+  .tag{display:inline-block;background:#14171a;color:#f3f5f5;font-size:13px;font-weight:560;font-stretch:85%;padding:3px 8px;margin-left:-8px}
+  .cell p,.cell li{font-size:16px;line-height:1.45;margin-top:12px}
+  .cell ul{list-style:none}
+  .cell li{margin-top:6px}
+  .cell li:first-child{margin-top:12px}
+  .cell .big{font-size:22px;line-height:1.25;font-weight:600;font-stretch:110%;letter-spacing:-.01em}
+  .label{position:absolute;left:38px;top:478px;font-size:26px;font-weight:620;font-stretch:114%;letter-spacing:-.01em}
+  .bio{position:absolute;left:368px;top:482px;width:682px}
+  .bio p{margin-bottom:16px}
+  .bio em{font-style:italic}
+</style></head>
+<body>
+<header><span class="name">Jason Zhong</span><nav><span class="on">About</span><span>Projects</span><span>Contact</span></nav><span class="utils"><span>GitHub</span><span>Theme</span></span></header>
+<h1>About</h1>
+<div class="strip">
+  <div class="cell"><span class="tag">Education</span><p class="big">UNSW Sydney</p><p>BSc Computer Science (Distinction), 2021–2024</p></div>
+  <div class="cell"><span class="tag">Experience</span><ul>
+    <li>IT and systems administration</li><li>Full-stack web development</li><li>Internal tools, from idea to production</li></ul></div>
+  <div class="cell"><span class="tag">Languages spoken</span><p class="big">English, 中文, 日本語</p><p>Mandarin Chinese and Japanese</p></div>
+  <div class="cell"><span class="tag">Based in</span><p class="big">Sydney, Australia</p></div>
+</div>
+<h2 class="label">Bio</h2>
+<div class="bio">
+  <p>I studied Computer Science at UNSW, graduating with Distinction in 2024. I've spent the years since working across the stack: running networks and Windows fleets on-site, building web apps, and leading the build of an in-house work health and safety app used on real construction sites, from idea to production.</p>
+  <p>Shipping software end to end on my own taught me a lot about what it takes to get something real into people's hands. It also made me appreciate how much faster you grow alongside experienced engineers, and I'm especially drawn to infrastructure, networking and latency, where the systems underneath <em>are</em> the product.</p>
+  <p>In my own time I'm drawn to local-first, privacy-respecting software. I run a Proxmox homelab handling home automation, solar and battery optimisation, document processing and media.</p>
+</div>
+</body></html>

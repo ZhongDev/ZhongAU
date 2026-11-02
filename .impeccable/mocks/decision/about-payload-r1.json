@@ -1,0 +1,59 @@
+{
+  "title": "Choose the About page structure",
+  "question": "Your steer, Datasheet + Index, leads this hand; the roll dealt three fresh structures beside it. Lock one, steer again, or re-roll.",
+  "options": [
+    {
+      "id": "about-steer",
+      "kind": "grounded",
+      "label": "Datasheet + Index",
+      "kicker": "YOUR STEER",
+      "lineage": "The Datasheet's front page over The Index's skills section",
+      "thesis": "Bio and a ruled facts table share the first viewport; the skills index with project links follows across the grid.",
+      "palette": ["#f3f5f5", "#14171a", "#c3c9ce", "#2b3cf0", "#4b525a"],
+      "materials": ["two-column front page", "ruled facts table", "dot-leader skills index", "cobalt project references"],
+      "viewport": "Bio in a reading column on the left; Education, Experience, Languages and base in a ruled table on the right; the skills index opens at the fold.",
+      "risk": "The facts table ends well before the bio does, so the right half sits empty for a stretch on wide screens.",
+      "html": ".impeccable/mocks/decision/about-steer.html"
+    },
+    {
+      "id": "about-facing",
+      "kind": "assigned",
+      "label": "Facing Pages",
+      "kicker": "THE ROLL",
+      "lineage": "A book's open spread: text on the left page, index on the right",
+      "thesis": "The bio and the skills index sit side by side as one spread, with education, experience and languages in a strip beneath.",
+      "palette": ["#f3f5f5", "#14171a", "#c3c9ce", "#2b3cf0", "#4b525a"],
+      "materials": ["one spread across the grid", "dot-leader skills index", "cobalt project references", "facts strip"],
+      "viewport": "Bio on the left half; the six skill groups in two index columns on the right half, references in cobalt.",
+      "risk": "Two dense halves compete for the eye, and on phones the spread collapses into a plain stack.",
+      "html": ".impeccable/mocks/decision/about-facing.html"
+    },
+    {
+      "id": "about-chapters",
+      "kind": "dealt",
+      "label": "Chapters",
+      "lineage": "Home's label-and-body sections, one per bio paragraph",
+      "thesis": "Each bio paragraph becomes its own section carrying the facts it mentions: education with study, skills with the homelab, languages with the last.",
+      "palette": ["#f3f5f5", "#14171a", "#c3c9ce", "#2b3cf0", "#4b525a"],
+      "materials": ["label-and-body sections", "facts set under each paragraph", "condensed labels", "skills index in parts"],
+      "viewport": "Title, then the first section: its label on the left, paragraph one with education and experience set beneath it.",
+      "risk": "The section labels are new copy, and the skill groups end up split across three sections.",
+      "html": ".impeccable/mocks/decision/about-chapters.html"
+    },
+    {
+      "id": "about-rail",
+      "kind": "dealt",
+      "label": "Contents Rail",
+      "lineage": "A manual's side contents, held as a sticky rail",
+      "thesis": "A sticky contents rail in the label column tracks the five sections on the right, the current one marked by the cobalt Now line.",
+      "palette": ["#f3f5f5", "#14171a", "#c3c9ce", "#2b3cf0", "#4b525a"],
+      "materials": ["sticky contents rail", "cobalt position line", "calm reading column", "skills index"],
+      "viewport": "Contents list in the label column with Bio marked; the bio opens in the body column beside it.",
+      "risk": "Five sections on one page hardly need contents, and marking the current one takes client JavaScript.",
+      "html": ".impeccable/mocks/decision/about-rail.html"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": { "value": "code" }
+}

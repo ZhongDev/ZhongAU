@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Projects: Project Datasheets (first viewport sketch)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background-color:#f3f5f5;color:#14171a;font-family:Archivo,sans-serif;font-size:17px;line-height:1.6;position:relative;
+    background-image:linear-gradient(to right,#c3c9ce 1px,transparent 1px),linear-gradient(to right,#e1e5e7 1px,transparent 1px);
+    background-size:360px 100%,30px 100%}
+  header{position:absolute;inset:0 0 auto 0;height:64px;border-bottom:1px solid #c3c9ce;display:flex;align-items:center}
+  .name{position:absolute;left:38px;font-weight:600;font-size:16px}
+  nav{position:absolute;left:368px;display:flex;gap:32px;font-size:15px}
+  nav .on{text-decoration:underline;text-decoration-color:#2b3cf0;text-decoration-thickness:2px;text-underline-offset:.4em}
+  .utils{position:absolute;right:30px;display:flex;gap:24px;font-size:15px}
+  h1{position:absolute;left:38px;top:104px;font-size:76px;line-height:1;font-weight:700;font-stretch:122%;letter-spacing:-.035em}
+  .hr{position:absolute;left:0;right:0;border-top:1px solid #c3c9ce}
+  .k{font-size:13px;font-weight:560;font-stretch:85%;color:#4b525a;padding-bottom:6px;border-bottom:1px solid #c3c9ce}
+  .toc{position:absolute;left:728px;top:88px;width:674px}
+  .toc ol{list-style:none;columns:2;column-gap:30px;padding-top:6px}
+  .toc li{font-size:15px;line-height:28px;break-inside:avoid}
+  .toc a{color:#2b3cf0;text-underline-offset:.2em}
+  .sheet-name{position:absolute;left:38px;font-size:46px;line-height:1.05;font-weight:700;font-stretch:118%;letter-spacing:-.03em}
+  .desc{position:absolute;left:38px;width:652px;font-size:19px;line-height:1.55}
+  .spec{position:absolute;left:728px;width:674px}
+  table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5}
+  th{width:150px;text-align:left;vertical-align:top;font-size:13px;font-weight:560;font-stretch:85%;color:#4b525a;padding:11px 8px 11px 0}
+  td{padding:10px 0;vertical-align:top}
+  tr{border-bottom:1px solid #c3c9ce}
+  .st{display:flex;gap:1px}
+  .st i{display:flex;align-items:center;justify-content:center;width:89px;height:28px;box-shadow:inset 0 0 0 1px #c3c9ce;font-style:normal;font-size:12px;font-weight:560;font-stretch:85%}
+  .st i.on{background:#14171a;color:#f3f5f5;box-shadow:none}
+  .q{color:#4b525a}
+</style></head>
+<body>
+<header><span class="name">Jason Zhong</span><nav><span>About</span><span class="on">Projects</span><span>Contact</span></nav><span class="utils"><span>GitHub</span><span>Theme</span></span></header>
+<h1>Projects</h1>
+<div class="toc"><h2 class="k">Contents</h2><ol>
+  <li><a>Homelab &amp; home energy optimisation</a></li><li><a>Local document pipeline</a></li><li><a>YouTube Karaoke App</a></li>
+  <li><a>E-ink home dashboards</a></li><li><a>webcon-sdvx / maimai-webcon</a></li><li><a>Ardducky</a></li><li><a>Archive</a></li>
+</ol></div>
+<div class="hr" style="top:258px"></div>
+
+<h2 class="sheet-name" style="top:296px">Homelab &amp; home energy optimisation</h2>
+<p class="desc" style="top:376px">A Proxmox host running Home Assistant and a stack of self-hosted services. The centrepiece is a linear-programming optimiser that schedules a home solar and battery system and EV charging against live wholesale electricity prices. It bridges the optimiser's output to inverter control over Modbus, using setpoints that avoid wearing out the inverter's storage. All of it sits on a UniFi network with 2.5GbE where it matters.</p>
+<div class="spec" style="top:376px"><table>
+  <tr><th>Status</th><td><div class="st"><i class="on">Ongoing</i><i></i><i></i></div></td></tr>
+  <tr><th>Built with</th><td>Proxmox · Home Assistant · Modbus · Linear programming · UniFi</td></tr>
+  <tr><th>Source</th><td class="q">No public repo</td></tr>
+</table></div>
+
+<div class="hr" style="top:614px"></div>
+<h2 class="sheet-name" style="top:656px">Local document pipeline</h2>
+<p class="desc" style="top:736px">Self-hosted paperless-ngx with vision-model OCR and automatic metadata classification. It's powered by a local LLM reached over Tailscale, so documents never leave the network.</p>
+<div class="spec" style="top:736px"><table>
+  <tr><th>Status</th><td><div class="st"><i class="on">Ongoing</i><i></i><i></i></div></td></tr>
+  <tr><th>Built with</th><td>paperless-ngx · Ollama · Vision OCR · Tailscale</td></tr>
+</table></div>
+</body></html>

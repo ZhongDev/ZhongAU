@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>About: The Datasheet (first viewport sketch)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background-color:#f3f5f5;color:#14171a;font-family:Archivo,sans-serif;font-size:17px;line-height:1.6;position:relative;
+    background-image:linear-gradient(to right,#c3c9ce 1px,transparent 1px),linear-gradient(to right,#e1e5e7 1px,transparent 1px);
+    background-size:360px 100%,30px 100%}
+  header{position:absolute;inset:0 0 auto 0;height:64px;border-bottom:1px solid #c3c9ce;display:flex;align-items:center}
+  .name{position:absolute;left:38px;font-weight:600;font-size:16px}
+  nav{position:absolute;left:368px;display:flex;gap:32px;font-size:15px}
+  nav .on{text-decoration:underline;text-decoration-color:#2b3cf0;text-decoration-thickness:2px;text-underline-offset:.4em}
+  .utils{position:absolute;right:30px;display:flex;gap:24px;font-size:15px}
+  h1{position:absolute;left:38px;top:104px;font-size:76px;line-height:1;font-weight:700;font-stretch:122%;letter-spacing:-.035em}
+  .bio{position:absolute;left:38px;top:222px;width:652px}
+  .bio h2,.facts h2{font-size:13px;font-weight:560;font-stretch:85%;color:#4b525a;padding-bottom:6px;border-bottom:1px solid #c3c9ce;margin-bottom:14px}
+  .bio p{margin-bottom:14px}
+  .bio em{font-style:italic}
+  .facts{position:absolute;left:750px;top:222px;width:660px}
+  table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5}
+  th{width:150px;text-align:left;vertical-align:top;font-size:13px;font-weight:560;font-stretch:85%;color:#4b525a;padding:10px 8px 10px 0}
+  td{padding:10px 0;vertical-align:top}
+  tr{border-bottom:1px solid #c3c9ce}
+  td ul{list-style:none}
+  td li+li{margin-top:6px}
+  .skills{position:absolute;left:30px;right:30px;top:792px}
+  .skills .head{display:grid;grid-template-columns:330px 420px 1fr;background:#14171a;color:#f3f5f5;font-size:13px;font-weight:560;font-stretch:85%}
+  .skills .head span{padding:6px 8px}
+  .skills .row{display:grid;grid-template-columns:330px 420px 1fr;border-bottom:1px solid #c3c9ce;font-size:15px}
+  .skills .row span{padding:9px 8px}
+  .skills .row .g{font-weight:600;font-stretch:110%}
+  .skills .row .ref{color:#2b3cf0;text-decoration:underline;text-underline-offset:.2em;font-size:14px}
+</style></head>
+<body>
+<header><span class="name">Jason Zhong</span><nav><span class="on">About</span><span>Projects</span><span>Contact</span></nav><span class="utils"><span>GitHub</span><span>Theme</span></span></header>
+<h1>About</h1>
+<section class="bio">
+  <h2>Bio</h2>
+  <p>I studied Computer Science at UNSW, graduating with Distinction in 2024. I've spent the years since working across the stack: running networks and Windows fleets on-site, building web apps, and leading the build of an in-house work health and safety app used on real construction sites, from idea to production.</p>
+  <p>Shipping software end to end on my own taught me a lot about what it takes to get something real into people's hands. It also made me appreciate how much faster you grow alongside experienced engineers, and I'm especially drawn to infrastructure, networking and latency, where the systems underneath <em>are</em> the product.</p>
+  <p>In my own time I'm drawn to local-first, privacy-respecting software. I run a Proxmox homelab handling home automation, solar and battery optimisation, document processing and media. I also experiment with running LLMs locally, and I'm learning Swift and SwiftUI to build native apps for macOS and iOS. I care about detail, and I'd always rather read the primary source than trust a summary of it.</p>
+</section>
+<section class="facts">
+  <h2>Background</h2>
+  <table>
+    <tr><th>Education</th><td>UNSW Sydney — BSc Computer Science (Distinction), 2021–2024</td></tr>
+    <tr><th>Experience</th><td><ul>
+      <li>IT and systems administration: on-site networking, Windows fleet upgrades, tech support</li>
+      <li>Full-stack web development: Node.js/TypeScript backends, React frontends</li>
+      <li>Internal tools: led an in-house work site safety app from idea to production</li></ul></td></tr>
+    <tr><th>Languages spoken</th><td>English, Mandarin Chinese (中文), Japanese (日本語)</td></tr>
+    <tr><th>Based in</th><td>Sydney, Australia</td></tr>
+  </table>
+</section>
+<section class="skills">
+  <div class="head"><span>Skills</span><span>Skill</span><span>Used in</span></div>
+  <div class="row"><span class="g">Languages</span><span>TypeScript/JavaScript</span><span><span class="ref">Karaoke app</span> · <span class="ref">webcon</span></span></div>
+  <div class="row"><span class="g"></span><span>Swift</span><span></span></div>
+  <div class="row"><span class="g"></span><span>Python</span><span><span class="ref">webcon</span> · <span class="ref">webcon-sdvx-python</span></span></div>
+</section>
+</body></html>

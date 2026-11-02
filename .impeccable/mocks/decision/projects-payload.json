@@ -1,0 +1,46 @@
+{
+  "title": "Choose the Projects page structure",
+  "question": "The design system is settled; this choice is how /projects is arranged. All three keep the About skill links landing on a marked project. The roll dealt Status Bands first. Lock one, steer it, or re-roll.",
+  "options": [
+    {
+      "id": "projects-bands",
+      "kind": "assigned",
+      "label": "Status Bands",
+      "kicker": "THE ROLL",
+      "lineage": "Home's label-and-body sections, one per station",
+      "thesis": "The page divides into Ongoing, In progress, Shipped and Archive, each status a section holding its projects, in the station order Home uses.",
+      "palette": ["#f3f5f5", "#14171a", "#c3c9ce", "#2b3cf0", "#4b525a"],
+      "materials": ["status as the section label", "station key as contents", "ruled project rows", "archive as the fourth band"],
+      "viewport": "Title over a station key that doubles as contents with counts; the Ongoing band opens with Homelab and Document pipeline in Home's row form.",
+      "risk": "Two projects per band makes thin sections, and the stations on each row repeat what the band already says.",
+      "html": ".impeccable/mocks/decision/projects-bands.html"
+    },
+    {
+      "id": "projects-board",
+      "kind": "dealt",
+      "label": "Quarter Board",
+      "lineage": "The Home chart's four six-hour quarters, one per status",
+      "thesis": "Four columns on the quarter lines hold Ongoing, In progress, Shipped and Archive, so the whole record sits on one sheet.",
+      "palette": ["#f3f5f5", "#14171a", "#c3c9ce", "#2b3cf0", "#4b525a"],
+      "materials": ["quarter-line columns", "inverted station headers", "compact project entries", "archive names in the last quarter"],
+      "viewport": "Title, then four columns headed by station cells; each featured project sits in its status column, the archive names filling the fourth.",
+      "risk": "Quarter columns hold about 40 characters a line, so long descriptions run tall, and the board can read like a kanban.",
+      "html": ".impeccable/mocks/decision/projects-board.html"
+    },
+    {
+      "id": "projects-sheets",
+      "kind": "dealt",
+      "label": "Project Datasheets",
+      "lineage": "About's datasheet front page, one per project",
+      "thesis": "Each featured project gets a sheet: its name in the wide cut, the description as the reading column, and a ruled table of status, tech and source beside it.",
+      "palette": ["#f3f5f5", "#14171a", "#c3c9ce", "#2b3cf0", "#4b525a"],
+      "materials": ["wide display project names", "ruled spec tables", "station cells in the table", "archive as a dot-leader index"],
+      "viewport": "Title, then the Homelab sheet: name in the wide cut, description on the left half, Status, Built with and Source in a ruled table on the right.",
+      "risk": "One paragraph per project leaves each sheet lighter than a datasheet promises, and six sheets make a long scroll before the archive.",
+      "html": ".impeccable/mocks/decision/projects-sheets.html"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": { "value": "code" }
+}
