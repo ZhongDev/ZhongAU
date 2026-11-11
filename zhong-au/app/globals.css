@@ -9,8 +9,15 @@
  */
 
 @layer base {
+  /*
+   * Both themes are drawn here, so each scheme is declared with 'only':
+   * browsers that recolour light pages on dark devices (Safari's Adaptive
+   * Dark Mode, Chrome's auto dark theme) must leave a light pick alone.
+   * The plain declaration stays as a fallback where 'only' fails to parse.
+   */
   :root {
     color-scheme: light;
+    color-scheme: light only;
     --ground: #f3f5f5;
     --ink: #14171a;
     --ink-2: #3a4148;
@@ -28,6 +35,7 @@
 
   :root[data-theme='dark'] {
     color-scheme: dark;
+    color-scheme: dark only;
     --ground: #0e1113;
     --ink: #e6e9ec;
     --ink-2: #b4bcc3;
@@ -43,6 +51,7 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme='light']) {
       color-scheme: dark;
+      color-scheme: dark only;
       --ground: #0e1113;
       --ink: #e6e9ec;
       --ink-2: #b4bcc3;
@@ -76,10 +85,7 @@
     }
   }
 
-  /* Safari on iOS tints its bars and overscroll from the body's own
-     background; without one it falls back to the device's scheme. */
   body {
-    background: var(--ground);
     font-size: 1.0625rem;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
