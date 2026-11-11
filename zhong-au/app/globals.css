@@ -76,7 +76,10 @@
     }
   }
 
+  /* Safari on iOS tints its bars and overscroll from the body's own
+     background; without one it falls back to the device's scheme. */
   body {
+    background: var(--ground);
     font-size: 1.0625rem;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;

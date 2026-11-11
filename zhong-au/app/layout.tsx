@@ -1,9 +1,10 @@
-import type { Metadata, Viewport } from 'next';
+import type { Metadata } from 'next';
 import { Archivo } from 'next/font/google';
 import './globals.css';
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
 import { site } from '@/content/site';
+import { themeColors } from '@/content/theme';
 
 const archivo = Archivo({
   subsets: ['latin'],
@@ -18,15 +19,10 @@ export const metadata: Metadata = {
   description: site.description,
 };
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f3f5f5' },
-    { media: '(prefers-color-scheme: dark)', color: '#0e1113' },
-  ],
-};
-
 // Applies a stored theme choice before first paint so there is no flash.
-const themeScript = `try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}`;
+// The theme-color metas follow the system by default; a stored choice
+// overrides both, so the browser chrome matches the page, not the device.
+const themeScript = `try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;var c=${JSON.stringify(themeColors)}[t];document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.content=c})}}catch(e){}`;
 
 export default function RootLayout({
   children,
@@ -36,6 +32,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={archivo.variable} suppressHydrationWarning>
       <head>
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: light)"
+          content={themeColors.light}
+          suppressHydrationWarning
+        />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: dark)"
+          content={themeColors.dark}
+          suppressHydrationWarning
+        />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="font-sans">

@@ -12,6 +12,8 @@ Welcome to the repository for my personal website hosted at [zhong.au](https://z
   - [Building for Production](#building-for-production)
   - [Building for Docker](#building-for-docker)
   - [Running on Docker without building](#running-on-docker-without-building)
+  - [Publishing an update to Docker Hub](#publishing-an-update-to-docker-hub)
+  - [Updating the server](#updating-the-server)
 - [License](#license)
 - [Contact](#contact)
 
@@ -117,7 +119,7 @@ docker run -p 127.0.0.1:3000:3000 zhongau/zhong-au:latest
 To start the server detatched and automatically restarting:
 
 ```bash
-docker run -d --restart unless-stopped -p 127.0.0.1:3000:3000 zhongau/zhong-au
+docker run -d --restart unless-stopped --name zhong-au -p 127.0.0.1:3000:3000 zhongau/zhong-au
 ```
 
 To check docker containers status:
@@ -129,8 +131,10 @@ docker ps
 To stop detached server:
 
 ```bash
-docker stop <continer id from 'docker ps'>
+docker stop zhong-au
 ```
+
+(If the container was started without `--name`, use its ID from `docker ps` instead.)
 
 It is recommended to run this behind a reverse proxy such as nginx to enable https, pointing it at the local port:
 
@@ -142,6 +146,44 @@ location / {
     proxy_set_header X-Forwarded-Proto $scheme;
 }
 ```
+
+### Publishing an update to Docker Hub
+
+The image lives at [`zhongau/zhong-au`](https://hub.docker.com/r/zhongau/zhong-au) on Docker Hub. There is no CI, so updates are built and pushed by hand. Run these from the `zhong-au` directory (the one containing the `Dockerfile`).
+
+1. **Log in** with a Docker Hub account that can push to `zhongau` (once per machine). Use a personal access token from Docker Hub → Account settings → Personal access tokens as the password:
+
+   ```bash
+   docker login
+   ```
+
+2. **Build and push** for both x86 and ARM servers:
+
+   ```bash
+   docker buildx build --platform linux/amd64,linux/arm64 -t zhongau/zhong-au:latest --push .
+   ```
+
+   Don't use plain `docker build` + `docker push` on an Apple Silicon Mac. That produces an arm64-only image, and an x86 server will fail to run it with `exec format error`.
+
+   If buildx reports that multi-platform builds aren't supported, run `docker buildx create --use` once, then retry.
+
+3. **Check** that both platforms were published:
+
+   ```bash
+   docker buildx imagetools inspect zhongau/zhong-au:latest
+   ```
+
+### Updating the server
+
+On the server, pull the new image and replace the running container:
+
+```bash
+docker pull zhongau/zhong-au:latest
+docker stop zhong-au && docker rm zhong-au
+docker run -d --restart unless-stopped --name zhong-au -p 127.0.0.1:3000:3000 zhongau/zhong-au
+```
+
+If the old container was started without `--name`, stop and remove it by its ID from `docker ps` instead. Afterwards, `docker image prune` deletes the previous image.
 
 ## License
 

@@ -1,9 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { themeColors, type Theme } from '@/content/theme';
 import { MoonIcon, SunIcon } from './Icons';
-
-type Theme = 'light' | 'dark';
 
 function currentTheme(): Theme {
   const stored = document.documentElement.dataset.theme;
@@ -29,6 +28,12 @@ export default function ThemeToggle() {
   const toggle = () => {
     const next: Theme = currentTheme() === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
+    // Keep the browser chrome on the chosen theme, not the device's.
+    document
+      .querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]')
+      .forEach((meta) => {
+        meta.content = themeColors[next];
+      });
     try {
       localStorage.setItem('theme', next);
     } catch {
