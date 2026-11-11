@@ -32,6 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={archivo.variable} suppressHydrationWarning>
       <head>
+        {/* Declares up front that the site draws its own dark theme. */}
+        <meta name="color-scheme" content="light dark" />
         <meta
           name="theme-color"
           media="(prefers-color-scheme: light)"
